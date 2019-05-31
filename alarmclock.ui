@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QLabel" name="lblTime">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>221</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblDate">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>200</y>
+        <width>271</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>110</y>
+        <width>191</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Monday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>30</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Tuesday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wensday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>60</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Thursday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Friday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_6">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>90</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Saturday</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_7">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>120</y>
+         <width>70</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sunday</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btnSet">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Set</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDelete">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="txtName">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>40</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTimeEdit" name="tAlarmTime">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>80</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="lvAlarmList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>191</width>
+        <height>421</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
