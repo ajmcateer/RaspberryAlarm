@@ -1,27 +1,28 @@
-import json
-import pyowm
+import forecastio
+import datetime
+from models.forecast_model import ForecastModel
 from PyQt5.QtCore import QTimer
+import requests.exceptions
+import datetime
+
 
 class GetWeather():
-    def __init__(self, model):
+    def __init__(self, model, forecast):
         self._model = model
+        self._forecast = forecast
         self.get_weather()
         self.weather_timer = QTimer()
         self.weather_timer.timeout.connect(self.get_weather)
         self.weather_timer.start(10800000)
 
     def get_weather(self):
-        owm = pyowm.OWM('c66e6922d1f3479ff5baf9c794fbe933')
-        observation = owm.weather_at_place("Harleysville, US")
-        weather = observation.get_weather()
-        self._model.current_temp = "Current: " + str(int(weather.get_temperature('fahrenheit')["temp"]))
-        self._model.temp_range = "Hi: " + str(int(weather.get_temperature('fahrenheit')["temp_max"])) + " | Low: " + str(int(weather.get_temperature('fahrenheit')["temp_min"]))
-        self._model.status = weather.get_status()
-        print(weather.get_status())
+        api_key = "b7ebaabda1d703f09e0684cdcfabf231"
+        lat = 40.2363
+        lng = -75.296
 
-        print("Done")
-
-
-if __name__ == '__main__':
-    test = GetWeather("")
-    test.get_weather()
+        try:
+            forecast = forecastio.load_forecast(api_key, lat, lng, units="us")
+        except ConnectionError as e:
+            print("Error: " + e)
+            return
+        self._forecast.forecast = forecast

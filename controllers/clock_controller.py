@@ -8,17 +8,18 @@ from get_weather import GetWeather
 
 
 class ClockController(QObject):
-    def __init__(self, model):
+    def __init__(self, model, forecast):
         super().__init__()
 
         self._model = model
+        self._forecast = forecast
         self.timer = QTimer()
         self.json_storage = JsonStorage("")
         self.load_alarms()
         self.timer.timeout.connect(self.clock)
         self.timer.start(1000)
         self.checker = AlarmChecker(self._model.alarms)
-        self.weather = GetWeather(self._model)
+        self.weather = GetWeather(self._model, self._forecast)
         print(self._model.temp)
 
     @pyqtSlot(int)

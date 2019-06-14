@@ -13,6 +13,15 @@ class ClockModel(QObject):
     list_changed = pyqtSignal(QStandardItemModel)
 
     @property
+    def forecast_object(self):
+        return self._forecast_object
+
+    @forecast_object.setter
+    def forecast_object(self, value):
+        self._forecast_object = value
+        self.forecast_object_changed.emit(value)
+
+    @property
     def current_temp(self):
         return self._current_temp
 
@@ -124,3 +133,4 @@ class ClockModel(QObject):
         self._temp_range = ""
         self._status = ""
         self._current_temp = ""
+        self._forecast_object = None
