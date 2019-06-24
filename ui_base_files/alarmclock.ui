@@ -20,20 +20,20 @@
       <x>0</x>
       <y>0</y>
       <width>801</width>
-      <height>431</height>
+      <height>451</height>
      </rect>
     </property>
-    <widget class="QWidget" name="toolBoxPage1">
+    <widget class="QWidget" name="page">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
        <width>801</width>
-       <height>377</height>
+       <height>397</height>
       </rect>
      </property>
      <attribute name="label">
-      <string>Clock</string>
+      <string>Display</string>
      </attribute>
      <widget class="QLabel" name="lblTime">
       <property name="geometry">
@@ -200,7 +200,7 @@
        <x>0</x>
        <y>0</y>
        <width>801</width>
-       <height>377</height>
+       <height>427</height>
       </rect>
      </property>
      <attribute name="label">

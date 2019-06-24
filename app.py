@@ -4,6 +4,7 @@ from models.clock_model import ClockModel
 from models.forecast_model import ForecastModel
 from controllers.clock_controller import ClockController
 from views.clock_view import AlarmClock
+import settings
 import qtmodern.styles
 import qtmodern.windows
 
