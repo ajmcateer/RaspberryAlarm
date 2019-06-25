@@ -4,7 +4,7 @@ from models.alarm_model import AlarmModel
 from views.add_alarm_view import AddAlarm
 from alarm_checker import AlarmChecker
 from json_storage import JsonStorage
-from get_weather import GetWeather
+from weather_forecaster import WeatherForecaster
 
 
 class ClockController(QObject):
@@ -19,7 +19,7 @@ class ClockController(QObject):
         self.timer.timeout.connect(self.clock)
         self.timer.start(1000)
         self.checker = AlarmChecker(self._model.alarms)
-        self.weather = GetWeather(self._model, self._forecast)
+        self.weather = WeatherForecaster(self._model, self._forecast)
         print(self._model.temp)
 
     @pyqtSlot(int)

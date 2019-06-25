@@ -1,12 +1,9 @@
 import forecastio
-import datetime
-from models.forecast_model import ForecastModel
+import os
 from PyQt5.QtCore import QTimer
-import requests.exceptions
-import datetime
 
 
-class GetWeather():
+class WeatherForecaster():
     def __init__(self, model, forecast):
         self._model = model
         self._forecast = forecast
@@ -16,7 +13,7 @@ class GetWeather():
         self.weather_timer.start(10800000)
 
     def get_weather(self):
-        api_key = "b7ebaabda1d703f09e0684cdcfabf231"
+        api_key = os.environ['DARKSKY_KEY']
         lat = 40.2363
         lng = -75.296
 
